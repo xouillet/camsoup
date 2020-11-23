@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camsoup</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <style>
+      .column-right {
+        border-radius: 5px;
+        border: 1px solid #9b4dca;
+        margin-right: 10px;
+        text-align: center;
+      }
+
+      .column-status {
+        border-bottom: 1px solid #9b4dca;
+        line-height: 100px;
+      }
+    </style>
+    <script></script>
+  </head>
+
+  <body>
+    <h2>Camsoup</h2>
+    <div class="row">
+      <div class="column column column-70">
+        <video
+          style="margin: auto"
+          id="video"
+          autoplay="true"
+          playsinline="true"
+          preload="auto"
+          width="1280"
+          height="720"
+          poster="assets/camsoup.png"
+          data-setup="{}"
+          muted
+          controls
+        ></video>
+      </div>
+      <div class="column column-20 column-right">
+        <div class="row">
+          <h4 class="column column-status">
+            Status:
+            <span id="status" style="color: #9b4dca">connecting...</span>
+          </h4>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <dl style="margin-top: 1rem">
+              <dt>
+                <a class="button" href="#" onclick="v4lAction('up')">Up</a>
+              </dt>
+              <dt>
+                <a class="button" href="#" onclick="v4lAction('left')">Left</a>
+                <a class="button" href="#" onclick="v4lAction('right')"
+                  >Right</a
+                >
+              </dt>
+              <dt>
+                <a class="button" href="#" onclick="v4lAction('down')">Down</a>
+              </dt>
+              <dt>
+                <a class="button" href="#" onclick="v4lAction('zoom_out')"
+                  >Zoom -</a
+                >
+                <a class="button" href="#" onclick="v4lAction('zoom_in')"
+                  >Zoom +</a
+                >
+              </dt>
+              <dt>
+                <a class="button" href="#" onclick="v4lAction('focus_out')"
+                  >Focus -</a
+                >
+                <a class="button" href="#" onclick="v4lAction('focus_in')"
+                  >Focus +</a
+                >
+              </dt>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="column column-10">&nbsp;</div>
+    </div>
+    <script src="client.ts"></script>
+  </body>
+</html>
